@@ -1,1 +1,31 @@
-/* Empty. Add your own CSS if you like */
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../lib/ionic/fonts/Montserrat-Regular.otf');
+}
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../lib/ionic/fonts/HelveticaNeue-Light.otf');
+}
+@font-face {
+    font-family: 'HelveticaNeueUltraLight';
+    src: url('../lib/ionic/fonts/HelveticaNeue-UltraLight.otf');
+}
+@font-face {
+    font-family: 'GothamRM';
+    src: url('../lib/ionic/fonts/gothamrnd-medium.ttf');
+}
+@font-face {
+    font-family: 'GothamRB';
+    src: url('../lib/ionic/fonts/gothamrnd-book.ttf');
+}
+
+
+.timeline-title {
+	font-family: GothamRM;
+	color: #aaa;
+}
+.timeline-date {
+	font-family: GothamRM;
+	color: #303030;
+	font-size: 18px;
+}
