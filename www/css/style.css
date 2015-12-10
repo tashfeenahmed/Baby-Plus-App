@@ -21,11 +21,22 @@
 
 
 .timeline-title {
-	font-family: GothamRM;
-	color: #aaa;
+    font-family: GothamRM;
+    color: #5B3D6D;
+    font-size: 18px;
+}
+.timeline-desc {
+    font-family: GothamRM;
+    color: #aaa;
+    font-size: 12px;
 }
 .timeline-date {
 	font-family: GothamRM;
-	color: #303030;
+	color: #fff;
 	font-size: 18px;
+    text-align: center;
+}
+
+.centerme {
+    text-align: center;
 }
