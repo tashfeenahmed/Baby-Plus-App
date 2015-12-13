@@ -3,6 +3,10 @@ angular.module('starter.controllers', [])
 .controller('timelineCtrl', function($scope,$state) {
 
 
+    $scope.mymenu = function(){
+        $state.go('mymenu');
+    }
+
 var objToday = new Date(),
                 weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
                 dayOfWeek = weekday[objToday.getDay()],
@@ -15,7 +19,7 @@ var objToday = new Date(),
                 curMinute = objToday.getMinutes() < 10 ? "0" + objToday.getMinutes() : objToday.getMinutes(),
                 curSeconds = objToday.getSeconds() < 10 ? "0" + objToday.getSeconds() : objToday.getSeconds(),
                 curMeridiem = objToday.getHours() > 12 ? "PM" : "AM";
-var today = dayOfWeek + ", " + dayOfMonth + " of " + curMonth + ", " + curYear;
+var today = dayOfWeek + ", the " + dayOfMonth + " of " + curMonth;
 
 
     $scope.today = today;
@@ -23,23 +27,31 @@ var today = dayOfWeek + ", " + dayOfMonth + " of " + curMonth + ", " + curYear;
 
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+
+.controller('menuCtrl', function($scope, $state) {
+
+
+    $scope.timeline = function(){
+        $state.go('timeline');
+    }
+
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('duasCtrl', function($scope, $state) {
+
+
+    $scope.timeline = function(){
+        $state.go('timeline');
+    }
+
+
+    $scope.mymenu = function(){
+        $state.go('mymenu');
+    }
+
+    
+
 })
 
 .controller('AccountCtrl', function($scope) {

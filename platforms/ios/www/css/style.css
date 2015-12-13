@@ -28,15 +28,29 @@
 .timeline-desc {
     font-family: GothamRM;
     color: #aaa;
-    font-size: 12px;
+    font-size: 16px;
 }
 .timeline-date {
 	font-family: GothamRM;
-	color: #fff;
-	font-size: 18px;
+	color:  #210A36;
+	font-size: 16px;
     text-align: center;
 }
 
 .centerme {
     text-align: center;
+}
+
+
+
+.timeline-icon {
+	max-width: 100px;width: 50% !important; margin: 0 auto!important; padding-top: 150px;
+}
+.menu-icon {
+	max-width: 50px;width: 50% !important; margin: 0 auto!important;
+}
+.menu-titles {
+    font-family: GothamRM;
+    color: #8E66AA;
+    font-size: 12px;
 }

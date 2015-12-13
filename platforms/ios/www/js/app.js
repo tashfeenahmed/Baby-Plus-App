@@ -1,4 +1,4 @@
-// Ionic Starter App
+// Ionic Starter App  #5B3D6D;
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
@@ -32,47 +32,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
 
   // Each tab has its own nav history stack:
 
   .state('timeline', {
     url: '/timeline',
-    templateUrl: 'templates/tab-dash.html',
+    templateUrl: 'templates/home.html',
     controller: 'timelineCtrl'
   })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
+  .state('duas', {
+    url: '/duas',
+    templateUrl: 'templates/duas.html',
+    controller: 'duasCtrl'
+  })
+  .state('mymenu', {
+    url: '/mymenu',
+    templateUrl: 'templates/menu.html',
+    controller: 'menuCtrl'
   });
 
   // if none of the above states are matched, use this as the fallback
