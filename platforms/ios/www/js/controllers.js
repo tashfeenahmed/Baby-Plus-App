@@ -6,6 +6,9 @@ angular.module('starter.controllers', [])
     $scope.mymenu = function(){
         $state.go('mymenu');
     }
+    $scope.duas = function(){
+        $state.go('duas');
+    }
 
 var objToday = new Date(),
                 weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
@@ -50,7 +53,7 @@ var today = dayOfWeek + ", the " + dayOfMonth + " of " + curMonth;
         $state.go('mymenu');
     }
 
-    
+
 
 })
 
