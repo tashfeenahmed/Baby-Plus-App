@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../lib/ionic/fonts/Montserrat-Regular.otf');
+}
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../lib/ionic/fonts/HelveticaNeue-Light.otf');
+}
+@font-face {
+    font-family: 'HelveticaNeueUltraLight';
+    src: url('../lib/ionic/fonts/HelveticaNeue-UltraLight.otf');
+}
+@font-face {
+    font-family: 'GothamRM';
+    src: url('../lib/ionic/fonts/gothamrnd-medium.ttf');
+}
+@font-face {
+    font-family: 'GothamRB';
+    src: url('../lib/ionic/fonts/gothamrnd-book.ttf');
+}
+
+
+.timeline-title {
+    font-family: GothamRM;
+    color: #5B3D6D;
+    font-size: 18px;
+}
+.timeline-desc {
+    font-family: GothamRM;
+    color: #aaa;
+    font-size: 16px;
+}
+.timeline-date {
+	font-family: GothamRM;
+	color:  #210A36;
+	font-size: 16px;
+    text-align: center;
+}
+
+.centerme {
+    text-align: center;
+}
+
+
+
+.timeline-icon {
+	max-width: 100px;width: 50% !important; margin: 0 auto!important; padding-top: 150px;
+}
+.menu-icon {
+	max-width: 50px;width: 50% !important; margin: 0 auto!important;
+}
+.menu-titles {
+    font-family: GothamRM;
+    color: #8E66AA;
+    font-size: 12px;
+}
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.top-pad {
+	padding-top: 150px;
+}
