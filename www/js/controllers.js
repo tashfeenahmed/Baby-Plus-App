@@ -6,8 +6,29 @@ angular.module('starter.controllers', [])
     $scope.mymenu = function(){
         $state.go('mymenu');
     }
-    $scope.duas = function(){
+    $scope.duas = function() {
         $state.go('duas');
+    }
+    $scope.exercises = function() {
+        $state.go('exercises');
+    }
+    $scope.food = function(){
+        $state.go('food');
+    }
+    $scope.weight = function(){
+        $state.go('weight');
+    }
+    $scope.faqs = function(){
+        $state.go('faqs');
+    }
+    $scope.tips = function(){
+        $state.go('tips');
+    }
+    $scope.tracker = function(){
+        $state.go('tracker');
+    }
+    $scope.doctor = function(){
+        $state.go('doctor');
     }
 
 var objToday = new Date(),
@@ -47,6 +68,21 @@ var today = dayOfWeek + ", the " + dayOfMonth + " of " + curMonth;
     $scope.food = function(){
         $state.go('food');
     }
+    $scope.weight = function(){
+        $state.go('weight');
+    }
+    $scope.faqs = function(){
+        $state.go('faqs');
+    }
+    $scope.tips = function(){
+        $state.go('tips');
+    }
+    $scope.tracker = function(){
+        $state.go('tracker');
+    }
+    $scope.doctor = function(){
+        $state.go('doctor');
+    }
 
 })
 
@@ -65,6 +101,83 @@ var today = dayOfWeek + ", the " + dayOfMonth + " of " + curMonth;
 
 
 })
+.controller('doctorCtrl', function($scope, $state) {
+
+
+    $scope.timeline = function(){
+        $state.go('timeline');
+    }
+
+
+    $scope.mymenu = function(){
+        $state.go('mymenu');
+    }
+
+
+
+})
+.controller('tipsCtrl', function($scope, $state) {
+
+
+    $scope.timeline = function(){
+        $state.go('timeline');
+    }
+
+
+    $scope.mymenu = function(){
+        $state.go('mymenu');
+    }
+
+
+
+})
+.controller('trackerCtrl', function($scope, $state) {
+
+
+    $scope.timeline = function(){
+        $state.go('timeline');
+    }
+
+
+    $scope.mymenu = function(){
+        $state.go('mymenu');
+    }
+
+
+
+})
+.controller('chooseCtrl', function($scope, $state) {
+
+
+    $scope.timeline = function(){
+        $state.go('timeline');
+    }
+
+
+    $scope.mymenu = function(){
+        $state.go('mymenu');
+    }
+
+ $scope.opts = {
+    val1: false,
+    val2: false,
+    val3: false,
+    val4: false,
+    val5: false,
+    val6: false,
+    val7: false,
+    val8: false
+  };
+  
+  $scope.computedTotal = function () {
+    var opts = $scope.opts;
+    var total = (opts.val1 ? 93 : 0) + (opts.val2 ? 92 : 0) + (opts.val3 ? 103 : 0) + (opts.val4 ? 70 : 0) + (opts.val5 ? 178 : 0) + (opts.val6 ? 124 : 0) + (opts.val7 ? 77 : 0) + (opts.val8 ? 30 : 0);
+    
+     return total;
+  }
+
+
+})
 
 
 .controller('foodCtrl', function($scope, $state) {
@@ -79,6 +192,10 @@ var today = dayOfWeek + ", the " + dayOfMonth + " of " + curMonth;
         $state.go('mymenu');
     }
 
+
+    $scope.choose = function() {
+        $state.go('choose');
+    }
 })
 
 
@@ -92,6 +209,41 @@ var today = dayOfWeek + ", the " + dayOfMonth + " of " + curMonth;
 
     $scope.mymenu = function(){
         $state.go('mymenu');
+    }
+
+
+
+})
+.controller('faqsCtrl', function($scope, $state) {
+
+
+    $scope.timeline = function(){
+        $state.go('timeline');
+    }
+
+
+    $scope.mymenu = function(){
+        $state.go('mymenu');
+    }
+
+
+
+})
+
+
+.controller('loginCtrl', function($scope, $state) {
+
+
+    $scope.timeline = function(){
+        $state.go('timeline');
+    }
+
+
+})
+.controller('fpCtrl', function($scope, $state) {
+
+    $scope.login = function(){
+        $state.go('login');
     }
 
 

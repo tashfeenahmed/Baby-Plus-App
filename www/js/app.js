@@ -72,6 +72,46 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/mymenu',
     templateUrl: 'templates/menu.html',
     controller: 'menuCtrl'
+  })
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
+  })
+  .state('faqs', {
+    url: '/faqs',
+    templateUrl: 'templates/faqs.html',
+    controller: 'faqsCtrl'
+  })
+  .state('tips', {
+    url: '/tips',
+    templateUrl: 'templates/tips.html',
+    controller: 'tipsCtrl'
+  })
+  .state('tracker', {
+    url: '/tracker',
+    templateUrl: 'templates/tracker.html',
+    controller: 'trackerCtrl'
+  })
+  .state('doctor', {
+    url: '/doctor',
+    templateUrl: 'templates/doctor.html',
+    controller: 'doctorCtrl'
+  })
+  .state('choose', {
+    url: '/choose',
+    templateUrl: 'templates/choose.html',
+    controller: 'chooseCtrl'
+  })
+  .state('forgot-password', {
+    url: '/forgot-password',
+    templateUrl: 'templates/forgot-password.html',
+    controller: 'fpCtrl'
+  })
+  .state('weight', {
+    url: '/weight',
+    templateUrl: 'templates/weight.html',
+    controller: 'wCtrl'
   });
 
   // if none of the above states are matched, use this as the fallback
