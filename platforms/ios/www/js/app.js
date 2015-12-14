@@ -1,13 +1,26 @@
-// Ionic Starter App  #5B3D6D;
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
-.run(function($ionicPlatform) {
+
+.factory('$localstorage', ['$window', function($window) {
+  return {
+    set: function(key, value) {
+      $window.localStorage[key] = value;
+    },
+    get: function(key, defaultValue) {
+      return $window.localStorage[key] || defaultValue;
+    },
+    setObject: function(key, value) {
+      $window.localStorage[key] = JSON.stringify(value);
+    },
+    getObject: function(key) {
+      return JSON.parse($window.localStorage[key] || '{}');
+    }
+  }
+}])
+
+
+.run(function($ionicPlatform,$localstorage) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -45,10 +58,60 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: 'templates/duas.html',
     controller: 'duasCtrl'
   })
+  .state('food', {
+    url: '/food',
+    templateUrl: 'templates/food.html',
+    controller: 'foodCtrl'
+  })
+  .state('exercises', {
+    url: '/exercises',
+    templateUrl: 'templates/exercises.html',
+    controller: 'exercisesCtrl'
+  })
   .state('mymenu', {
     url: '/mymenu',
     templateUrl: 'templates/menu.html',
     controller: 'menuCtrl'
+  })
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
+  })
+  .state('faqs', {
+    url: '/faqs',
+    templateUrl: 'templates/faqs.html',
+    controller: 'faqsCtrl'
+  })
+  .state('tips', {
+    url: '/tips',
+    templateUrl: 'templates/tips.html',
+    controller: 'tipsCtrl'
+  })
+  .state('tracker', {
+    url: '/tracker',
+    templateUrl: 'templates/tracker.html',
+    controller: 'trackerCtrl'
+  })
+  .state('doctor', {
+    url: '/doctor',
+    templateUrl: 'templates/doctor.html',
+    controller: 'doctorCtrl'
+  })
+  .state('choose', {
+    url: '/choose',
+    templateUrl: 'templates/choose.html',
+    controller: 'chooseCtrl'
+  })
+  .state('forgot-password', {
+    url: '/forgot-password',
+    templateUrl: 'templates/forgot-password.html',
+    controller: 'fpCtrl'
+  })
+  .state('weight', {
+    url: '/weight',
+    templateUrl: 'templates/weight.html',
+    controller: 'wCtrl'
   });
 
   // if none of the above states are matched, use this as the fallback
