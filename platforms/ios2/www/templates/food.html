@@ -1,0 +1,57 @@
+<ion-view>
+
+<ion-nav-bar  class="bar-royal">
+
+  <ion-nav-title >Today's Food</ion-nav-title>
+ </ion-nav-bar>
+
+  <ion-nav-buttons side="right">
+      <button class="button button-icon icon" ng-click="choose()">Choose Food</button>
+   </ion-nav-buttons>
+   <ion-content animation="slide-left-right-ios7">
+      <br/><br/>
+
+      
+      <ion-slide-box active-slide="myActiveSlide">
+         <ion-slide style="text-align: center;">
+            <div class="item item-image">
+               <img src="./img/000-slide-2.jpg">
+             </div>
+            <h2 class="timeline-title">
+               Breakfast
+            </h2>
+            <br/><br/>
+            <br/><br/>
+         </ion-slide>
+
+         <ion-slide style="text-align: center;">
+            <div class="item item-image">
+               <img src="./img/000-slide-4.jpg">
+             </div>
+            <h2 class="timeline-title">
+              Lunch
+            </h2>
+            <br/><br/>
+            <br/><br/>
+         </ion-slide>
+
+      
+         <ion-slide style="text-align: center;">
+            <div class="item item-image">
+               <img src="./img/000-slide-7.jpg">
+             </div>
+            <h2 class="timeline-title">
+               Dinner
+            </h2>
+            <br/><br/>
+            <br/><br/>
+         </ion-slide>
+         
+
+
+      </ion-slide-box>
+   </ion-content>
+   <div class="bar bar-footer bar-light" ng-click="mymenu()" animation="slide-in-up">
+      <div class="title"><i class="ion-navicon-round"></i></div>
+   </div>
+</ion-view>

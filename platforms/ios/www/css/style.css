@@ -42,6 +42,11 @@
 }
 
 
+.menu-title {
+    font-family: GothamRM;
+    color: #5B3D6D !important;
+    font-size: 14px !important;
+}
 
 .timeline-icon {
 	max-width: 100px;width: 50% !important; margin: 0 auto!important; padding-top: 150px;

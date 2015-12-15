@@ -1,0 +1,33 @@
+<ion-view  hide-nav-bar="true">
+   <ion-content class="centerme">
+      <br/><br/>
+      <p class="timeline-date">Choose Today's Meal</p>
+      <br/><br/>
+<ion-list>
+
+  <ion-checkbox  ng-model="opts.val1">Omelette</ion-checkbox>
+  <ion-checkbox ng-model="opts.val2">Fried Egg</ion-checkbox>
+  <ion-checkbox  ng-model="opts.val3">Milk (1 cup, unpurified)</ion-checkbox>
+  <ion-checkbox ng-model="opts.val4">1 slice Toasted Bread</ion-checkbox>
+  <ion-checkbox  ng-model="opts.val5">1 slice French Toast with Butter</ion-checkbox>
+  <ion-checkbox ng-model="opts.val6">1 cup Cereal</ion-checkbox>
+  <ion-checkbox  ng-model="opts.val7">Hard Boiled Egg</ion-checkbox>
+  <ion-checkbox ng-model="opts.val8">Tea (with milk and sugar 1 teacup)</ion-checkbox>
+
+</ion-list>
+
+      
+
+            <h2 class="timeline-title">
+             Total: {{ computedTotal() }} calories
+            </h2>
+            <p class="timeline-desc padding" ng-click="duas()">
+               It's the 37th Day of your pregnancy. You should be taking 500-550 calories in breakfast.
+            </p>
+
+
+   </ion-content>
+   <div class="bar bar-footer bar-light" ng-click="mymenu()" animation="slide-in-up">
+      <div class="title"><i class="ion-navicon-round"></i></div>
+   </div>
+</ion-view>
