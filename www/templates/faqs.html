@@ -1,10 +1,17 @@
-<ion-view  hide-nav-bar="true">
+<ion-view>
+
+
+   <ion-nav-buttons side="left">
+      <button class="button button-icon icon ion-more gcolor" ng-click="timeline()"></button>
+   </ion-nav-buttons>
+<ion-nav-bar  class="bar-royal">
+
+
+  <ion-nav-title >Frequestly Asked Questions</ion-nav-title>
+ </ion-nav-bar>
    <ion-content class="centerme">
 
-      <br/><br/>
-            <h2 class="timeline-title">
-              Frequestly Asked Questions
-            </h2>
+      <br/>
             <p class="timeline-desc padding" ng-click="duas()">
                Answered by Experts and Gynaecologists
             </p>
@@ -48,6 +55,6 @@ All of these defects occur during the first 28 days of pregnancy — usually bef
 
    </ion-content>
    <div class="bar bar-footer bar-light" ng-click="mymenu()" animation="slide-in-up">
-      <div class="title"><i class="ion-navicon-round"></i></div>
+      <div class="title menu-title"><i class="ion-navicon-round"></i> MENU</div>
    </div>
 </ion-view>
