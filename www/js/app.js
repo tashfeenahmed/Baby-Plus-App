@@ -112,9 +112,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/weight',
     templateUrl: 'templates/weight.html',
     controller: 'wCtrl'
+  })
+  .state('settings', {
+    url: '/settings',
+    templateUrl: 'templates/settings.html',
+    controller: 'settingsCtrl'
   });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
 
 });
+
+
+
+

@@ -83,6 +83,9 @@ var today = dayOfWeek + ", the " + dayOfMonth + " of " + curMonth;
     $scope.doctor = function(){
         $state.go('doctor');
     }
+    $scope.settings = function(){
+        $state.go('settings');
+    }
 
 })
 
@@ -101,7 +104,38 @@ var today = dayOfWeek + ", the " + dayOfMonth + " of " + curMonth;
 
 
 })
-.controller('doctorCtrl', function($scope, $state) {
+.controller('doctorCtrl', function($scope, $state, $ionicPopup, $timeout) {
+
+$scope.showPopup = function() {
+   $scope.data = {}
+
+   // An elaborate, custom popup
+   var myPopup = $ionicPopup.show({
+     template: '<input type="text" ng-model="data.wt">',
+     title: 'New Appointment',
+     subTitle: 'Please enter details about your appointment',
+     scope: $scope,
+     buttons: [
+       { text: 'Cancel' },
+       {
+         text: '<b>Save</b>',
+         type: 'button-royal',
+         onTap: function(e) {
+           if (!$scope.data.wt) {
+
+             e.preventDefault();
+           } else {
+             return $scope.data.wt;
+           }
+         }
+       },
+     ]
+   });
+   myPopup.then(function(res) {
+     console.log('Tapped!', res);
+   });
+  };
+
 
 
     $scope.timeline = function(){
@@ -229,6 +263,21 @@ var today = dayOfWeek + ", the " + dayOfMonth + " of " + curMonth;
 
 
 })
+.controller('settingsCtrl', function($scope, $state) {
+
+
+    $scope.timeline = function(){
+        $state.go('timeline');
+    }
+
+
+    $scope.mymenu = function(){
+        $state.go('mymenu');
+    }
+
+
+
+})
 
 
 .controller('loginCtrl', function($scope, $state) {
@@ -250,7 +299,7 @@ var today = dayOfWeek + ", the " + dayOfMonth + " of " + curMonth;
 
 })
 
-.controller('wCtrl', function($scope, $state) {
+.controller('wCtrl', function($scope, $state, $ionicPopup, $timeout) {
 
 var weightshow = "N/A";
 
@@ -274,6 +323,36 @@ function isEmpty(obj) {
    var weightshow = "N/A";
  }
 
+$scope.showPopup = function() {
+   $scope.data = {}
+
+   // An elaborate, custom popup
+   var myPopup = $ionicPopup.show({
+     template: '<input type="text" ng-model="data.wt">',
+     title: 'Enter a new weight',
+     subTitle: 'Please enter your weight in KGs',
+     scope: $scope,
+     buttons: [
+       { text: 'Cancel' },
+       {
+         text: '<b>Save</b>',
+         type: 'button-royal',
+         onTap: function(e) {
+           if (!$scope.data.wt) {
+
+             e.preventDefault();
+           } else {
+             return $scope.data.wt;
+           }
+         }
+       },
+     ]
+   });
+   myPopup.then(function(res) {
+     console.log('Tapped!', res);
+   });
+  };
+
     $scope.timeline = function(){
         $state.go('timeline');
     }
@@ -282,6 +361,18 @@ function isEmpty(obj) {
     $scope.mymenu = function(){
         $state.go('mymenu');
     }
+
+
+
+$scope.graph = {};
+  $scope.graph.data = [
+    //Awake
+    [16, 15, 20, 12, 16, 12, 8],
+    //Asleep
+    [8, 9, 4, 12, 8, 12, 14]
+  ];
+  $scope.graph.labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  $scope.graph.series = ['Awake', 'Asleep'];
 
 
 
